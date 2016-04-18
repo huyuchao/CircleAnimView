@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_movie_details_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent" >
+
+    <ImageView
+        android:id="@+id/iv_fly"
+        android:layout_width="@dimen/flycircle_img_width"
+        android:layout_height="@dimen/flycircle_img_height"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="208dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shouye_haibao" />
+
+    <!--
+     android:layout_width="100dp"
+     android:layout_height="130dp  android:layout_marginLeft="16dp"
+         android:layout_marginTop="208dp" "
+    -->
+
+    <Button
+        android:id="@+id/btn_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Animation" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Back" />
+
+    <com.heaven.circleanimview.views.CircleAnimView
+        android:id="@+id/cav_anim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

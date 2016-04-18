@@ -1,0 +1,8 @@
+<resources>
+
+    <dimen name="flycircle_img_width">104dip</dimen>
+    <dimen name="flycircle_img_height">140dip</dimen>
+
+    <dimen name="flycircle_img_left">12dip</dimen>
+    <dimen name="flycircle_img_top">208dip</dimen>
+</resources>

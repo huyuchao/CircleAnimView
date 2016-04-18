@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">@android:color/transparent</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="bg_color">#f6f6f6</color>
+
+    <!-- 后期修改 -->
+    <!-- 黑色 -->
+    <color name="c1">#000000</color>
+    <!-- 深灰 -->
+    <color name="c2">#646464</color>
+    <!-- 浅灰 -->
+    <color name="c3">#969696</color>
+    <!-- 很浅的灰-->
+    <color name="c4">#c8c8c8</color>
+    <!-- 红 -->
+    <color name="c5">#ce2b2b</color>
+    <!-- 白色 -->
+    <color name="c6">#ffffff</color>
+    <color name="cline">#d7d7d7</color>
+    <color name="cline_movie_details">#c8c8c8</color>
+
+
+
+</resources>

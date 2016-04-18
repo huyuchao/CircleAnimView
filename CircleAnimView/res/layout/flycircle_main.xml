@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_login1" >
+
+    <GridView
+        android:id="@+id/gv_movies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3" >
+    </GridView>
+
+    <RelativeLayout
+        android:id="@+id/rl_movie_details_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="activity parent" >
+    </RelativeLayout>
+
+    <com.heaven.circleanimview.views.flowview.FlyCircleAnimView
+        android:id="@+id/fv_fly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+    </com.heaven.circleanimview.views.flowview.FlyCircleAnimView>
+
+</RelativeLayout>

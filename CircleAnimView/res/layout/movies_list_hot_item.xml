@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_body"
+    android:layout_width="104dp"
+    android:layout_height="wrap_content"
+    android:background="#f6f6f6"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <!-- 海报图区域 208 280 -->
+
+    <RelativeLayout
+        android:id="@+id/lyt_movie_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/img_movie_photo"
+            android:layout_width="104dp"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shouye_haibao" />
+
+        <ImageView
+            android:id="@+id/movie_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/img_movie_photo"
+            android:layout_alignTop="@+id/img_movie_photo"
+            android:background="@android:color/transparent"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <!-- 影院名称和format -->
+
+    <LinearLayout
+        android:id="@+id/lyt_movie_title"
+        android:layout_width="104dp"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <!-- <com.leying365.widget.autofittextview.AutofitTextView -->
+
+        <TextView
+            android:id="@+id/text_movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dip"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="tttt" />
+
+        <LinearLayout
+            android:id="@+id/ll_presal"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_see_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="5" />
+
+            <!-- 右侧 人数  文字不能删除 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dip"
+                android:text="人想看" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_hot"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/text_movie_right_info2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dip"
+                android:text="7.6" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_fill"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:visibility="invisible" >
+    </ImageView>
+
+</LinearLayout>
