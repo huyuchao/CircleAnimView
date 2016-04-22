@@ -1,5 +1,5 @@
 # CircleAnimView
-仿格瓦拉转场动画
+仿格瓦拉转场动画 [apk 下载](https://github.com/huyuchao/CircleAnimView/blob/master/CircleAnimView/CircleAnimView.apk?raw=true)
 
 gif工具不是太好，卡顿的太厉害~~
 
