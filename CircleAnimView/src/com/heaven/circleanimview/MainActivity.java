@@ -1,5 +1,6 @@
 package com.heaven.circleanimview;
 
+import com.heaven.circleanimview.autoscroll.AutoScrollActivity;
 import com.heaven.circleanimview.flowview.FlowViewActivity;
 import com.heaven.circleanimview.flycircleanim.FlyCircleActivity;
 
@@ -24,7 +25,8 @@ public class MainActivity extends Activity implements OnClickListener{
 			startActivity(new Intent(this, CAnimXfermodeActivity.class));
 			break;
 		case R.id.btn_flow_view:
-			startActivity(new Intent(this, FlowViewActivity.class));
+//			startActivity(new Intent(this, FlowViewActivity.class));
+			startActivity(new Intent(this, AutoScrollActivity.class));
 			break;
 		case R.id.btn_fly_circle:
 			startActivity(new Intent(this, FlyCircleActivity.class));
