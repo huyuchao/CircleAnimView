@@ -129,6 +129,9 @@ public class CircleAnimXfermodeView extends View {
 		paint.setAntiAlias(true);
 		paint.setStyle(Style.FILL);
 		
+		width = context.getResources().getDisplayMetrics().widthPixels;
+		height = context.getResources().getDisplayMetrics().heightPixels;
+		
 		xfermode = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
 		
 		originalBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_4444);
@@ -150,6 +153,7 @@ public class CircleAnimXfermodeView extends View {
 		imgHeight = (int) context.getResources().getDimension(R.dimen.flycircle_img_height);
 		imgLeft = (int) context.getResources().getDimension(R.dimen.flycircle_img_left);;
 		imgTop = (int) context.getResources().getDimension(R.dimen.flycircle_img_top);;
+		
 		cx=imgLeft+imgWidth/2; // 32  312
 		cy=imgTop+imgHeight/2; // 624  420
 		LogUtil.e(this, "imgWidth = "+ imgWidth + " imgHeight="+imgHeight 
