@@ -114,8 +114,8 @@ public class AutoScrollImageView extends View {
 			bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.asiv1,bfoptions);
 			bitmap2 = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.asiv2,bfoptions);
 			*/
-			bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.asiv1);
-			bitmap2 = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.asiv2);
+			bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.as1);
+			bitmap2 = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.as3);
 			if(bitmap!=null){
 				width1 = bitmap.getWidth();
 			}
@@ -227,7 +227,7 @@ public class AutoScrollImageView extends View {
 		this.direction = direction;
 		this.step = step;
 		if(screenWidth%step!=0){
-			throw new RuntimeException("step不是屏幕宽度的整数倍");
+			throw new RuntimeException("step 是2张图片的公约数");
 		}
 		if(direction==1){
         	leftone = screenWidth-width1;
