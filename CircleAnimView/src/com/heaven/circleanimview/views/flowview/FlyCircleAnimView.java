@@ -148,6 +148,9 @@ public class FlyCircleAnimView  extends RelativeLayout{
 		paint.setAntiAlias(true);
 		paint.setStyle(Style.FILL);
 		
+		canvaswWidth = context.getResources().getDisplayMetrics().widthPixels;
+		canvasHeight = context.getResources().getDisplayMetrics().heightPixels;
+		
 		xfermode = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
 		
 		maskColor = Color.parseColor("#c8c8c8");
