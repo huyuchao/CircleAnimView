@@ -201,13 +201,6 @@ public class AutoScrollImageView extends View {
 		invalidate();
 	}*/
 	
-	
-	/**
-	 * 
-	 * @param direction   
-	 * @param step  
-	 */
-	
 	/**
 	 * 滚动图片
 	 * @param direction	1,right  0 left -1 不滚动
