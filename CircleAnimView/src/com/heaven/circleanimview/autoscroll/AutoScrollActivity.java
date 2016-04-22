@@ -16,9 +16,9 @@ public class AutoScrollActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.auto_scroll_main);
-		((AutoScrollImageView)findViewById(R.id.asiv_left_top)).startScroll(0,1);
-		((AutoScrollImageView)findViewById(R.id.asiv_right)).startScroll(1, 1);
-//		((AutoScrollImageView)findViewById(R.id.asiv_left)).setDirection(0);
+		((AutoScrollImageView)findViewById(R.id.asiv_left_top)).startScroll(0,2,R.drawable.as1,R.drawable.as2);
+		((AutoScrollImageView)findViewById(R.id.asiv_right)).startScroll(1, 2,R.drawable.as3,R.drawable.as1);
+		((AutoScrollImageView)findViewById(R.id.asiv_left)).startScroll(0, 2,R.drawable.as2,R.drawable.as1);
 	}
 
 	@Override

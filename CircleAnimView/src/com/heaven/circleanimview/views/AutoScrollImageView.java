@@ -83,24 +83,14 @@ public class AutoScrollImageView extends View {
         paint = new Paint();
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);// 空心圆
+        direction = -1;
         
         screenWidth = getContext().getResources().getDisplayMetrics().widthPixels;
-        initBitmap();
-        
-        direction = -1;
-        if(direction==1){// right  (0,-1080)
-        	leftone = screenWidth-width1;
-            lefttwo = leftone+(-width2);
-        }else  if(direction==0){// left  (0,1080)
-        	leftone = screenWidth-width1;
-            lefttwo = leftone+width2;
-        }else{
-        	leftone = 0;
-        }
+//        initBitmap();
         LogUtil.e(this, "init leftone = "+ leftone + " lefttwo="+lefttwo + " screenWidth = "+screenWidth);
     }
 
-	private void initBitmap() {
+	private void initBitmap(int resIdOne,int resIdtwo) {
 		try {
 			//如果图片过大，等比压缩下。 但是要保证，图片的宽度==屏幕宽度 。 否则onDraw中就只能通过clipRect来处理图片了
 			/*BitmapFactory.Options bfoptions = new BitmapFactory.Options();
@@ -114,8 +104,10 @@ public class AutoScrollImageView extends View {
 			bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.asiv1,bfoptions);
 			bitmap2 = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.asiv2,bfoptions);
 			*/
-			bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.as1);
-			bitmap2 = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.as3);
+			bitmap = BitmapFactory.decodeResource(getContext().getResources(), resIdOne);
+			bitmap2 = BitmapFactory.decodeResource(getContext().getResources(), resIdtwo);
+//			bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.as1);
+//			bitmap2 = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.as3);
 			if(bitmap!=null){
 				width1 = bitmap.getWidth();
 			}
@@ -203,32 +195,42 @@ public class AutoScrollImageView extends View {
 	 * 1,right  0 left -1 不滚动
 	 * @param direction 
 	 */
-	public void setDirection(int direction) {
+	/*public void setDirection(int direction) {
 		this.direction = direction;
-		if(direction==1){
-        	leftone = screenWidth-width1;
-            lefttwo = screenWidth-width1-width2;
-        }else if(direction==0){
-        	leftone = screenWidth-width1;
-            lefttwo = screenWidth-width1+width2;
-        }else{
-        	leftone = 0;
-        }
+		initLeftPoint(direction);
 		invalidate();
-	}
+	}*/
 	
 	
 	/**
 	 * 
-	 * @param direction   1,right  0 left -1 不滚动
-	 * @param step  越小越慢，保证是屏幕宽度的整数倍
+	 * @param direction   
+	 * @param step  
 	 */
-	public void startScroll(int direction,int step){
+	
+	/**
+	 * 滚动图片
+	 * @param direction	1,right  0 left -1 不滚动
+	 * @param step		越小越慢，保证是屏幕宽度的整数倍
+	 * @param resIdOne	one drawable
+	 * @param resIdtwo	two drawable
+	 */
+	public void startScroll(int direction,int step,int resIdOne,int resIdtwo){
 		this.direction = direction;
 		this.step = step;
 		if(screenWidth%step!=0){
 			throw new RuntimeException("step 是2张图片的公约数");
 		}
+		initBitmap(resIdOne,resIdtwo);
+		initLeftPoint(direction);
+		invalidate();
+	}
+
+	/**
+	 * 初始化2张图片的left坐标
+	 * @param direction
+	 */
+	private void initLeftPoint(int direction) {
 		if(direction==1){
         	leftone = screenWidth-width1;
             lefttwo = screenWidth-width1-width2;
@@ -238,7 +240,6 @@ public class AutoScrollImageView extends View {
         }else{
         	leftone = 0;
         }
-		invalidate();
 	}
 
 	
