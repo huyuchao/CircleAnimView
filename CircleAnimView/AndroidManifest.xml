@@ -34,6 +34,9 @@
         <activity
             android:name="com.heaven.circleanimview.flycircleanim.FlyCircleActivity">
         </activity>
+        <activity
+            android:name="com.heaven.circleanimview.autoscroll.AutoScrollActivity">
+        </activity>
     </application>
 
 </manifest>
